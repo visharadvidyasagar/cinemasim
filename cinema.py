@@ -5,3 +5,11 @@ movies = {
     "Movie 3": {"min_age": 12, "available_seats": 0},
     "Movie 4": {"min_age": 10, "available_seats": 20}
 }
+
+#display the movies available with the seats
+def display_movies():
+    print("Available movies:")
+    for movie in movies:
+        print(f"- {movie} (Min Age: {movies[movie]['min_age']}, 
+              Available Seats: {movies[movie]['available_seats']})")
+
