@@ -13,3 +13,7 @@ def display_movies():
         print(f"- {movie} (Min Age: {movies[movie]['min_age']}, 
               Available Seats: {movies[movie]['available_seats']})")
 
+def book_movie():
+    display_movies()
+    selected_movie = input("Enter the name of the movie you want to watch: ")
+    
