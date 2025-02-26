@@ -21,4 +21,17 @@ def book_movie():
         print("Sorry, that movie is not available.")
         return
     
+    age = int(input("Enter your age: "))
+    if age < movies[selected_movie]['min_age']:
+        print("Sorry, you are too young to watch this movie.")
+        return
     
+    if movies[selected_movie]['available_seats'] <= 0:
+        print("Sorry, there are no available seats for this movie.")
+        return
+    
+    movies[selected_movie]['available_seats'] -= 1
+    print("Booking successful! Enjoy your movie.")
+
+if __name__ == "__main__":
+    book_movie()
