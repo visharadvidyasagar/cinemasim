@@ -17,3 +17,8 @@ def book_movie():
     display_movies()
     selected_movie = input("Enter the name of the movie you want to watch: ")
     
+    if selected_movie not in movies:
+        print("Sorry, that movie is not available.")
+        return
+    
+    
